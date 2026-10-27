@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TechPulse Málaga: descubre los eventos de tecnología más interesantes de Málaga." />
+    <title>TechPulse Málaga · Eventos tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="TechPulse Málaga, inicio">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>tech<span>pulse</span><small>.málaga</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a class="active" href="#agenda">Agenda</a>
+          <a href="#explora">Explora</a>
+          <a href="#comunidad">Comunidad</a>
+        </nav>
+        <div class="top-actions">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Cambiar tema">
+            <span class="sun">☼</span><span class="moon">◐</span>
+          </button>
+          <button class="add-event" type="button"><span>+</span> Proponer evento</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="explora">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="pulse-dot"></span> Málaga · 36.7213° N, 4.4214° W</p>
+            <h1>Tu próximo<br /><em>gran evento</em><br />empieza aquí<span class="cursor">_</span></h1>
+            <p class="hero-text">La agenda viva de la comunidad tecnológica malagueña. Conecta, aprende y construye el futuro desde la Costa del Sol.</p>
+            <div class="hero-stats">
+              <div><strong>42</strong><span>eventos este mes</span></div>
+              <div><strong>18</strong><span>comunidades activas</span></div>
+              <div><strong>2.4k</strong><span>personas conectadas</span></div>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="sun-core"><span>✦</span></div>
+            <div class="orbit-label label-top">OPEN SOURCE</div>
+            <div class="orbit-label label-side">AI / ML</div>
+            <div class="orbit-label label-bottom">STARTUPS</div>
+          </div>
+        </section>
+
+        <section class="agenda-section" id="agenda">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">01 / calendario</p>
+              <h2>La agenda de <span>Málaga</span></h2>
+            </div>
+            <div class="view-switcher" role="group" aria-label="Vista del calendario">
+              <button class="selected" type="button">Mes</button>
+              <button type="button">Lista</button>
+            </div>
+          </div>
+
+          <div class="filter-row">
+            <button class="filter active" data-filter="all" type="button">Todos <b>12</b></button>
+            <button class="filter" data-filter="meetup" type="button"><i class="dot dot-blue"></i> Meetups</button>
+            <button class="filter" data-filter="workshop" type="button"><i class="dot dot-purple"></i> Workshops</button>
+            <button class="filter" data-filter="conference" type="button"><i class="dot dot-orange"></i> Conferencias</button>
+            <button class="filter" data-filter="networking" type="button"><i class="dot dot-green"></i> Networking</button>
+          </div>
+
+          <div class="calendar-layout">
+            <section class="calendar-card" aria-label="Calendario de eventos">
+              <div class="calendar-toolbar">
+                <button class="calendar-arrow" id="previous-month" type="button" aria-label="Mes anterior">←</button>
+                <h3 id="month-label">Octubre <span>2025</span></h3>
+                <button class="calendar-arrow" id="next-month" type="button" aria-label="Mes siguiente">→</button>
+                <button class="today-button" id="today-button" type="button">Hoy</button>
+              </div>
+              <div class="calendar-grid calendar-weekdays" aria-hidden="true">
+                <span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span><span>DOM</span>
+              </div>
+              <div class="calendar-grid" id="calendar-days"></div>
+              <div class="calendar-legend">
+                <span><i class="dot dot-blue"></i> Meetup</span>
+                <span><i class="dot dot-purple"></i> Workshop</span>
+                <span><i class="dot dot-orange"></i> Conferencia</span>
+                <span><i class="dot dot-green"></i> Networking</span>
+              </div>
+            </section>
+
+            <aside class="upcoming-card" id="comunidad">
+              <div class="aside-heading">
+                <div><p class="eyebrow">próximamente</p><h3>Lo que viene</h3></div>
+                <span class="live-badge"><i></i> En directo</span>
+              </div>
+              <div class="event-list" id="event-list"></div>
+              <a class="all-events-link" href="#agenda">Ver todos los eventos <span>↗</span></a>
+            </aside>
+          </div>
+        </section>
+
+        <section class="quote-banner">
+          <span class="quote-mark">“</span>
+          <p>La mejor tecnología es la que reúne<br /><strong>a las personas adecuadas.</strong></p>
+          <span class="quote-author">— comunidad tech de Málaga</span>
+        </section>
+      </main>
+
+      <footer>
+        <div class="brand footer-brand"><span class="brand-mark">&lt;/&gt;</span><span>tech<span>pulse</span><small>.málaga</small></span></div>
+        <p>Hecho con <span class="heart">♥</span> y mucho café en la Costa del Sol.</p>
+        <div class="footer-links"><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Contacto</a></div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
